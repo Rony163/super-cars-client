@@ -41,7 +41,7 @@ const MyOrders = () => {
     return (
         <div>
             {matchOrders.length ?
-                <div className="mt-5 pt-2">
+                <div>
                     <h1 className="text-info">Your Orders List</h1>
                     <Row xs={1} md={3} className="g-4 m-2">
                         {

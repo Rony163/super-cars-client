@@ -16,6 +16,7 @@ import MyOrders from '../../Orders/MyOrders/MyOrders';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import Review from '../../Review/Review';
 import './Dashboard.css';
+import AddProduct from '../AddProduct/AddProduct';
 
 const drawerWidth = 200;
 
@@ -121,6 +122,9 @@ function Dashboard(props) {
                     </Route>
                     <Route path={`${path}/review`}>
                         <Review></Review>
+                    </Route>
+                    <Route path={`${path}/addProduct`}>
+                        <AddProduct></AddProduct>
                     </Route>
                 </Switch>
             </Box>
