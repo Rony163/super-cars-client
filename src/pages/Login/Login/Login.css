@@ -1,0 +1,35 @@
+.login-container{
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 30px -10px gray;
+    border-radius: 10px;
+}
+.style{
+    margin: 10px 0px;
+    padding: 5px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    background-color: #F7F7FD;
+    padding-left: 10px;
+}
+.register-design{
+    background-color: #03C2A1;
+    color: white;
+}
+.login-icon{
+    text-align: center;
+}
+.login-icon i{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+}
+.new-style{
+    text-decoration: none;
+    color: #03C2A1;
+}

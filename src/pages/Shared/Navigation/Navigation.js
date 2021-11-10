@@ -2,9 +2,11 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png';
 
 const Navigation = () => {
+    const { user, logout } = useAuth();
     return (
         <div>
             <Navbar fixed='top' expand="lg" style={{ backgroundColor: '#212529' }}>
@@ -21,16 +23,18 @@ const Navigation = () => {
                             <Nav.Link as={HashLink} className="text-info" to="/home">Home</Nav.Link>
                         </Nav>
 
-                        <div className='d-flex flex-column flex-lg-row'>
-                            <Nav.Link className="text-info me-2" as={Link} to='/collections'>Collections</Nav.Link>
-                            <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
-                        </div>
-
-                        <div className='d-flex flex-column flex-lg-row'>
-                            <Nav.Link as={HashLink} className="text-info" to="/dashboard">Dashboard</Nav.Link>
-                            {/* <span className="text-danger p-2"><i className="fas fa-user"></i></span> */}
-                            {/* <button className="btn btn-info">LogOut </button> */}
-                        </div>
+                        {!user?.email ?
+                            <div className='d-flex flex-column flex-lg-row'>
+                                <Nav.Link className="text-info me-2" as={Link} to='/collections'>Collections</Nav.Link>
+                                <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
+                            </div>
+                            :
+                            <div className='d-flex flex-column flex-lg-row'>
+                                <Nav.Link as={HashLink} className="text-info" to="/dashboard">Dashboard</Nav.Link>
+                                <span className="text-danger p-2"><i className="fas fa-user"></i>{user?.displayName}</span>
+                                <button className="btn btn-info" onClick={logout}>LogOut </button>
+                            </div>
+                        }
 
                     </Navbar.Collapse>
                 </Container>

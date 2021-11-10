@@ -1,0 +1,67 @@
+import { useEffect, useState } from "react";
+import initializeFirebase from "../pages/Login/Firebase/firebase.init";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+
+initializeFirebase();
+
+const useFirebase = () => {
+    const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+
+    const auth = getAuth();
+
+    const registerUser = (email, password) => {
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+
+            })
+            .catch((error) => {
+
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    const loginUser = (email, password, location, history) => {
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+            })
+            .catch((error) => {
+
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            } else {
+                setUser({})
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
+    }, [auth])
+
+    const logout = () => {
+        setIsLoading(true);
+        signOut(auth).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        })
+            .finally(() => setIsLoading(false));
+    }
+
+    return {
+        user,
+        isLoading,
+        registerUser,
+        loginUser,
+        logout
+    }
+}
+
+export default useFirebase;
