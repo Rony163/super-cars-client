@@ -1,0 +1,24 @@
+.header-text-booking span{
+    font-size: 50px;
+    font-weight: bold;
+    color: #31D2F2;
+}
+.header-text-booking{
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+.input-field{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px 30px;
+}
+.btn-submit{
+    padding: 10px 50px;
+    background-color: #31D2F2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
