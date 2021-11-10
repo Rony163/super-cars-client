@@ -21,11 +21,11 @@ const Navigation = () => {
                             navbarScroll
                         >
                             <Nav.Link as={HashLink} className="text-info" to="/home">Home</Nav.Link>
+                            <Nav.Link className="text-info me-2" as={Link} to='/collections'>Collections</Nav.Link>
                         </Nav>
 
                         {!user?.email ?
-                            <div className='d-flex flex-column flex-lg-row'>
-                                <Nav.Link className="text-info me-2" as={Link} to='/collections'>Collections</Nav.Link>
+                            <div>
                                 <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
                             </div>
                             :

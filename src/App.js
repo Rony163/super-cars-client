@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Collections from './pages/Home/Collections/Collections';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Login/Register/Register';
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/collections">
+            <PrivateRoute path="/collections">
               <Collections></Collections>
-            </Route>
+            </PrivateRoute>
             <Route path="/dashboard">
               <Dashboard></Dashboard>
             </Route>
