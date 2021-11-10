@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Navigation from '../Shared/Navigation/Navigation';
