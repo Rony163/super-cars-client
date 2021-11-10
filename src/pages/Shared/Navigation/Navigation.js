@@ -21,7 +21,7 @@ const Navigation = () => {
                             navbarScroll
                         >
                             <Nav.Link as={HashLink} className="text-info" to="/home">Home</Nav.Link>
-                            <Nav.Link className="text-info me-2" as={Link} to='/collections'>Collections</Nav.Link>
+                            <Nav.Link className="text-info me-2" as={Link} to='/sharedCollections'>Collections</Nav.Link>
                         </Nav>
 
                         {!user?.email ?

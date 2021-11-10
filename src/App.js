@@ -2,10 +2,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
-import Collections from './pages/Home/Collections/Collections';
+import SharedCollections from './pages/Home/Collections/SharedCollection/SharedCollections';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
-import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Login/Register/Register';
 function App() {
   return (
@@ -19,9 +18,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/collections">
-              <Collections></Collections>
-            </PrivateRoute>
+            <Route path="/sharedCollections">
+              <SharedCollections></SharedCollections>
+            </Route>
             <Route path="/dashboard">
               <Dashboard></Dashboard>
             </Route>

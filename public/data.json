@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Lexus LFA – 552bhp",
+        "price": "$375,000",
+        "description": "Proof of how wild and fantastical the power outputs of naturally aspirated cars have got in recent years comes in the form of the LFA, which is the first in a 20-strong list.",
+        "img": "https://i.ibb.co/gdkvysT/1.jpg"
+    },
+    {
+        "name": "Lamborghini – 562bhp",
+        "price": "$467,000",
+        "description": "The LFA may be an all-time great dripping with glamour but it’s pipped by a Gallardo it’s a Lamborghini of course so there’s no great shame in that. The Gallardo may have been Lambo at its most accessible but by the end of its ten-year life, it was pumping out proper power",
+        "img": "https://i.ibb.co/0CxTqds/2.jpg"
+    },
+    {
+        "name": "Ferrari 458 Speciale – 597bhp",
+        "price": "$400,000",
+        "description": "The regular 458 Italia – with its 562bhp peak – would be strong enough to make this list, But then, in its twilight years, Ferrari turfed out all the luxury items, stiffened the suspension, and ignited its 4.5-litre N/A V8 just a little bit more. The Speciale’s near-600bhp peak arrives at an almost deafening 9,000rpm.",
+        "img": "https://i.ibb.co/WnRYcPP/3.jpg"
+    },
+    {
+        "name": "Lamborghini Huracan – 602bhp",
+        "price": "$275,000",
+        "description": "While Ferrari replaced the 458 with the twin-turbocharged 488, Lamborghini has managed to buck the trend and keep its smallest supercar traditionally powered A 5.2-litre V10 remains the engine of choice, this time nudging over the 600bhp mark. There’s no longer a manual version, though, a twin-clutch paddleshift gearbox developed with Audi taking its place.",
+        "img": "https://i.ibb.co/HqcDy61/4.jpg"
+    },
+    {
+        "name": "Maserati MC12 – 621bhp",
+        "price": "$178,000",
+        "description": "The Enzo’s more racecar cousin, the MC12 used essentially the same 6.0-litre V12 powertrain, just detuned a smidge. You’d hardly call 621bhp measly, though, and it’s enough to propel the bewinged Maser to 205mph via a 3.8sec 0-60mph time.",
+        "img": "https://i.ibb.co/3yS8xTr/5.jpg"
+    },
+    {
+        "name": "McLaren F1 - 627bhp",
+        "price": "$280,000",
+        "description": "McLaren’s road car range now entirely revolves around twin-turbo engines, namely various tunes of a 3.8-litre V8 that kick off at 540bhp.McLaren’s first road car, though, the utterly iconic F1, used no such measures to create its power, instead using a BMW-sourced V12. 6.1 litres in size and naturally aspirated, its 627bhp helped the welterweight F1 achieve its 241mph production car speed record that stood until the Bugatti Veyron’s arrival.",
+        "img": "https://i.ibb.co/t4VQhdV/6.jpg"
+    },
+    {
+        "name": "Ferrari Enzo – 651bhp",
+        "price": "$310,000",
+        "description": "The Enzo, meanwhile, heralded the arrival of helpful electronics, coming with a heap of Formula 1-inspired electrickery.Its 651bhp was enough to enable a 217mph top speed and 3.5sec 0-60mph time, while its upward-opening doors and see-through engine cover ensured it delivered all the exotica needed for a Ferrari hypercar.",
+        "img": "https://i.ibb.co/cCjmdqH/7.jpg"
+    },
+    {
+        "name": "Ferrari 599 GTO – 661bhp",
+        "price": "$380,000",
+        "description": "The Murcielago’s power output was matched by a similarly brutal rival from across the hills at Ferrari.Lowlier versions had 611bhp, but the GTO’s extra clout helped it shave nearly a second from the Enzo’s lap time at Ferrari’s own Fiorano test track.",
+        "img": "https://i.ibb.co/1sJnkMg/8.jpg"
+    },
+    {
+        "name": "Pagani Zonda LM – 700bhp",
+        "price": "$390,000",
+        "description": "We could list all manner of Zondas here, so endless do all of its versions and special editions feel, each and every one of them naturally aspirated.Most of them produce north of 600bhp, while Lewis Hamilton has his own, manual-gearbox one-off with 750bhp, but perhaps the most demonic road-going Zonda of all is this, the LM.",
+        "img": "https://i.ibb.co/fkhwwf8/9.jpg"
+    },
+    {
+        "name": "Lamborghini Aventador - 740bhp",
+        "price": "$280,000",
+        "description": "Once again, Lamborghini stuck to its guns and kept the Murcielago’s replacement naturally aspirated.This didn’t stop the regular Aventador making nearly 700bhp, while its more deranged SV iteration churns out an utterly frightening 740bhp.",
+        "img": " https://i.ibb.co/VQPMWjX/10.jpg"
+    },
+    {
+        "name": "Aston Martin One - 750bhp",
+        "price": "$390,000",
+        "description": "Until recently the world’s most potent N/A car, with a 750bhp screaming out of its Cosworth-tuned 7.3-litre V12 engine.It's mated to perhaps the most beautiful shape to yet wear the Aston badge, the One-77 almost impossibly curvy and exotic.",
+        "img": "https://i.ibb.co/jVLhW5Z/11.jpg"
+    },
+    {
+        "name": "LaFerrari - 789bhp",
+        "price": "$300,000",
+        "description": "The LaFerrari produces 950bhp with its combination of petrol and electric power. But without the motor, there’s still a 789bhp, 6.3-litre nat-asp V12 to ensure the LaFerrari will never, ever feel tardy.",
+        "img": "https://i.ibb.co/J3TwVn8/12.jpg"
+    }
+]

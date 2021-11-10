@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
-import Collections from '../Collections/Collections';
+import Products from '../Products/Products';
 import TopBanner from '../TopBanner/TopBanner';
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Navigation></Navigation>
             <TopBanner></TopBanner>
-            <Collections></Collections>
+            <Products></Products>
             <Footer></Footer>
         </div>
     );
