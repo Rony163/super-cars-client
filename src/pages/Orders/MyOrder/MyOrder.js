@@ -1,9 +1,22 @@
-import React from 'react';
+import { Card, Col } from 'react-bootstrap';
 
-const MyOrder = () => {
+const MyOrder = (props) => {
+    const { _id, mobile, address, color, productName, status } = props.order;
+
     return (
         <div>
-            <h1>This is my order</h1>
+            <Col className="shadow">
+                <Card>
+                    <Card.Body>
+                        <Card.Title>Car Name: {productName}</Card.Title>
+                        <p>Color: {color}</p>
+                        <p>Phone Number: {mobile}</p>
+                        <p>Address: {address}</p>
+                        <p>Status: {status}</p>
+                    </Card.Body>
+                    <button className="btn btn-danger" onClick={() => props.handleDelete(_id)}>Cancle</button>
+                </Card>
+            </Col>
         </div>
     );
 };

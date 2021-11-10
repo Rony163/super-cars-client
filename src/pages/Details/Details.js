@@ -4,6 +4,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import Footer from '../Shared/Footer/Footer';
+import Navigation from '../Shared/Navigation/Navigation';
 import './Details.css';
 
 const Details = () => {
@@ -65,35 +67,36 @@ const Details = () => {
     };
 
     return (
-        <Container>
-            <Row style={{ marginTop: '80px' }}>
-                <Col xs={12} md={6}>
-                    <div>
-                        <img className="img-fluid" src={products.img} alt="" />
-                        <h2>{products.name}</h2>
-                        <p>Price: {products.price}</p>
-                        <p>{products.description}</p>
-                    </div>
-                </Col>
-                <Col xs={12} md={6}>
-                    <div>
-                        <h1>Booking Here</h1>
+        <div>
+            <Navigation></Navigation>
+            <Container>
+                <Row style={{ marginTop: '80px' }}>
+                    <Col xs={12} md={6}>
+                        <div>
+                            <img className="img-fluid" src={products.img} alt="" />
+                            <h2>{products.name}</h2>
+                            <p>Price: {products.price}</p>
+                            <p>{products.description}</p>
+                        </div>
+                    </Col>
+                    <Col xs={12} md={6}>
+                        <div>
+                            <h1>Booking Here</h1>
 
-                        <form onSubmit={handleSubmit}>
-                            <input className="input-field" ref={refUserName} type="text" placeholder="Name" value={user.displayName || ''} />
-                            <input className="input-field" ref={refEmail} type="email" placeholder='Email' value={user.email || ''} />
-                            <input className="input-field" onChange={handleColor} type="text" placeholder='Car Color' required />
-                            <input className="input-field" onChange={handlePhoneNumber} type="number" placeholder='Phone Number' required />
-                            <input className="input-field" onChange={handleAddress} type="text" placeholder='Address' required />
-                            <input className="input-field btn-submit" type="submit" value="Purchase" />
-                        </form>
-                    </div>
-                    <NavLink to='/home'>
-                        <button className='mt-4 bg-info rounded fs-4 border border-white text-white'>Back to Home Page</button>
-                    </NavLink>
-                </Col>
-            </Row>
-        </Container>
+                            <form onSubmit={handleSubmit}>
+                                <input className="input-field" ref={refUserName} type="text" placeholder="Name" value={user.displayName || ''} />
+                                <input className="input-field" ref={refEmail} type="email" placeholder='Email' value={user.email || ''} />
+                                <input className="input-field" onChange={handleColor} type="text" placeholder='Car Color' required />
+                                <input className="input-field" onChange={handlePhoneNumber} type="number" placeholder='Phone Number' required />
+                                <input className="input-field" onChange={handleAddress} type="text" placeholder='Address' required />
+                                <input className="input-field btn-submit" type="submit" value="Purchase" />
+                            </form>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Footer></Footer>
+        </div>
     );
 };
 
