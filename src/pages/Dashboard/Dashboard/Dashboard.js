@@ -14,7 +14,6 @@ import { Button } from '@mui/material';
 import Payment from '../../Payment/Payment';
 import MyOrders from '../../Orders/MyOrders/MyOrders';
 import DashboardHome from '../DashboardHome/DashboardHome';
-import Review from '../../Review/Review';
 import './Dashboard.css';
 import AddProduct from '../AddProduct/AddProduct';
 import ManageAllOrders from '../ManageOrder/ManageAllOrders/ManageAllOrders';
@@ -22,6 +21,8 @@ import useAuth from '../../../hooks/useAuth';
 import ManageAllProducts from '../ManageProducts/ManageAllProducts/ManageAllProducts';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import AddReview from '../../AddReview/AddReview';
+import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 
 const drawerWidth = 200;
 
@@ -46,7 +47,7 @@ function Dashboard(props) {
                     <Box>
                         <Link className="link-style" to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
                         <Link className="link-style" to={`${url}/payment`}><Button color="inherit">Payment</Button></Link>
-                        <Link className="link-style" to={`${url}/review`}><Button color="inherit">Review</Button></Link>
+                        <Link className="link-style" to={`${url}/addReview`}><Button color="inherit">Review</Button></Link>
                     </Box>
                     :
                     <Box>
@@ -128,15 +129,15 @@ function Dashboard(props) {
                     <Route exact path={path}>
                         <DashboardHome></DashboardHome>
                     </Route>
-                    <Route path={`${path}/myOrders`}>
+                    <PrivateRoute path={`${path}/myOrders`}>
                         <MyOrders></MyOrders>
-                    </Route>
-                    <Route path={`${path}/payment`}>
+                    </PrivateRoute>
+                    <PrivateRoute path={`${path}/payment`}>
                         <Payment></Payment>
-                    </Route>
-                    <Route path={`${path}/review`}>
-                        <Review></Review>
-                    </Route>
+                    </PrivateRoute>
+                    <PrivateRoute path={`${path}/addReview`}>
+                        <AddReview></AddReview>
+                    </PrivateRoute>
                     <AdminRoute path={`${path}/manageAllOrders`}>
                         <ManageAllOrders></ManageAllOrders>
                     </AdminRoute>

@@ -1,0 +1,9 @@
+.input-style{
+    width: 30%;
+    margin-top: 10px;
+}
+.form-style{
+    width: 30% !important;
+    display: block;
+    margin: auto;
+}
