@@ -40,7 +40,7 @@ const Login = () => {
                     <button type="submit" className="style register-design">Login</button>
                     <p className=""><small>or login with</small></p>
                     <div className="login-icon">
-                        <i onClick={handleGoogleSignIn} style={{ color: '#03C2A1' }} class="fab fa-google"></i>
+                        <i onClick={handleGoogleSignIn} style={{ color: '#03C2A1' }} className="fab fa-google"></i>
                     </div>
                     <NavLink className="new-style" to="/register"><p>Create a new account?</p></NavLink>
                     {user?.email && <Alert severity="success">Login successfully!</Alert>}
