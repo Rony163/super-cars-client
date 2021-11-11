@@ -28,7 +28,7 @@ function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { logout } = useAuth();
+    const { logout, admin } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -39,15 +39,22 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             <Link className="link-style" to="/home"><Button color="inherit">Home</Button></Link>
-            <Link className="link-style" to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
-            <Link className="link-style" to={`${url}/payment`}><Button color="inherit">Payment</Button></Link>
-            <Link className="link-style" to={`${url}/review`}><Button color="inherit">Review</Button></Link>
-            <Box>
-                <Link className="link-style" to={`${url}/manageAllOrders`}><Button color="inherit">Manage all orders</Button></Link>
-                <Link className="link-style" to={`${url}/addProduct`}><Button color="inherit">Add a Product</Button></Link>
-                <Link className="link-style" to={`${url}/manageProducts`}><Button color="inherit">Manage Products</Button></Link>
-                <Link className="link-style" to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-            </Box>
+
+            {
+                !admin ?
+                    <Box>
+                        <Link className="link-style" to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
+                        <Link className="link-style" to={`${url}/payment`}><Button color="inherit">Payment</Button></Link>
+                        <Link className="link-style" to={`${url}/review`}><Button color="inherit">Review</Button></Link>
+                    </Box>
+                    :
+                    <Box>
+                        <Link className="link-style" to={`${url}/manageAllOrders`}><Button color="inherit">Manage all orders</Button></Link>
+                        <Link className="link-style" to={`${url}/addProduct`}><Button color="inherit">Add a Product</Button></Link>
+                        <Link className="link-style" to={`${url}/manageProducts`}><Button color="inherit">Manage Products</Button></Link>
+                        <Link className="link-style" to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                    </Box>
+            }
             <Link className="link-style" to="/home"><Button color="inherit" onClick={logout}>Logout</Button></Link>
         </div>
     );
