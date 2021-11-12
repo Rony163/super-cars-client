@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [status, setStatus] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://murmuring-temple-20006.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [status, orders])
@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want delete this Order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://murmuring-temple-20006.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
 
     const handleSuccess = id => {
         setStatus(!status);
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://murmuring-temple-20006.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

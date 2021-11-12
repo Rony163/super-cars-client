@@ -17,7 +17,7 @@ const Details = () => {
 
     // load data from database
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://murmuring-temple-20006.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [id])
@@ -47,7 +47,7 @@ const Details = () => {
         singleOrder.productName = products?.name;
         singleOrder.status = 'pending';
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://murmuring-temple-20006.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

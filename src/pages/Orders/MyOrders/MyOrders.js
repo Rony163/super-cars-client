@@ -10,7 +10,7 @@ const MyOrders = () => {
 
     // This is for load the data
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://murmuring-temple-20006.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -23,7 +23,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want cancle your Order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://murmuring-temple-20006.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

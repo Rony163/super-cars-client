@@ -24,7 +24,7 @@ const AddReview = () => {
     const handleReview = e => {
         review.name = refUserName.current.value;
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://murmuring-temple-20006.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

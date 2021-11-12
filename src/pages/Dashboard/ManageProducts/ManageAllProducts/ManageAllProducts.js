@@ -7,7 +7,7 @@ const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://murmuring-temple-20006.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -15,7 +15,7 @@ const ManageAllProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want delete this Product?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://murmuring-temple-20006.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
