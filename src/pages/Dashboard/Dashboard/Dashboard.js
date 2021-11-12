@@ -23,6 +23,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddReview from '../../AddReview/AddReview';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
+import AdminDashboard from '../AdminDashboard/AdminDashboard';
 
 const drawerWidth = 200;
 
@@ -127,7 +128,12 @@ function Dashboard(props) {
 
                 <Switch>
                     <Route exact path={path}>
-                        <DashboardHome></DashboardHome>
+                        {
+                            !admin ?
+                                <DashboardHome></DashboardHome>
+                                :
+                                <AdminDashboard></AdminDashboard>
+                        }
                     </Route>
                     <PrivateRoute path={`${path}/myOrders`}>
                         <MyOrders></MyOrders>

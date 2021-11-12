@@ -58,7 +58,6 @@ const Details = () => {
             .then(result => {
                 if (result.insertedId) {
                     alert("Purchase successful");
-                    // setProducts({});
                     e.target.reset();
                 }
             })
@@ -80,7 +79,7 @@ const Details = () => {
                     </Col>
                     <Col xs={12} md={6}>
                         <div>
-                            <h1>Booking Here</h1>
+                            <h1>Purchase Here</h1>
 
                             <form onSubmit={handleSubmit}>
                                 <input className="input-field" ref={refUserName} type="text" placeholder="Name" value={user.displayName || ''} />

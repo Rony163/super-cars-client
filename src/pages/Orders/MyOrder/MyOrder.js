@@ -14,7 +14,7 @@ const MyOrder = (props) => {
                         <p>Address: {address}</p>
                         <p>Status: {status}</p>
                     </Card.Body>
-                    <button className="btn btn-danger" onClick={() => props.handleDelete(_id)}>Cancle</button>
+                    <button className="btn btn-danger" onClick={() => props.handleDelete(_id)}>Cancel</button>
                 </Card>
             </Col>
         </div>

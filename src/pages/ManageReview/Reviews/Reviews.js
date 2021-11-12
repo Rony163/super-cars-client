@@ -20,7 +20,7 @@ const Reviews = () => {
                     :
                     <div>
                         <h1 className="text-info">Review Section</h1>
-                        <Row xs={1} md={3} id="reviews" className="g-4 m-2 mt-0">
+                        <Row xs={1} md={3} className="g-4 m-2 mt-0">
                             {
                                 reviews.map(review => <Review
                                     key={review._id}
