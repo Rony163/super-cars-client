@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import './Footer.css';
 import logo from '../../../images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -26,9 +27,9 @@ const Footer = () => {
                         <div className='footer-section'>
                             <h2>Socials Media</h2>
                             <div>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-facebook-square icon-color me-2"></i> Like our Facebook page</a>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-youtube-square icon-color me-2"></i> Subscribe our YouTube chanel</a>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-instagram icon-color me-2"></i> Follow on Instagram</a>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-facebook-square icon-color me-2"></i> Like our Facebook page</Link>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-youtube-square icon-color me-2"></i> Subscribe our YouTube chanel</Link>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-instagram icon-color me-2"></i> Follow on Instagram</Link>
                             </div>
                         </div>
                     </Col>

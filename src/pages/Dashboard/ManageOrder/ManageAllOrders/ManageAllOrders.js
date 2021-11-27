@@ -71,6 +71,7 @@ const ManageAllOrders = () => {
                 <h5 className="text-danger text-center mt-5 pt-5">There is nothing to show.</h5>
             }
         </div>
+
     );
 };
 
